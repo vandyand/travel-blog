@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Blog Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 mx-auto w-full md:w-1/2">
+    <header class="text-gray-700 body-font shadow w-full">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-start"
+      >
+        <nav class="flex lg:w-2/5 flex-wrap items-center text-base">
+          <a href="../../index.html" class="mr-5 hover:text-gray-900">Home</a>
+          <div class="relative mr-5">
+            <button id="dropdownButton" class="hover:text-gray-900">
+              Destinations
+            </button>
+            <div
+              id="dropdownMenu"
+              class="absolute hidden bg-white border border-gray-200 rounded shadow-lg mt-1 z-10"
+            >
+              <a
+                href="entries/historic-jekyll-island/index.html"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap"
+                >Historic Jekyll Island</a
+              >
+              <a
+                href="entries/driftwood-beach/index.html"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap"
+                >Driftwood Beach</a
+              >
+            </div>
+          </div>
+        </nav>
+        <a
+          class="flex lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-start mb-4 md:mb-0"
+        >
+          <span class="text-xl">VanDyke Travel Blog</span>
+        </a>
+      </div>
+    </header>
+    <main class="container mx-auto px-4 shadow-md">
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="text-center mb-20">
+            <h2 class="text-2xl text-gray-900 font-medium title-font mb-4">
+              Destinations
+            </h2>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/2">
+              <a href="entries/driftwood-beach/index.html">
+                <div
+                  class="h-full rounded-lg overflow-hidden text-center relative"
+                >
+                  <img
+                    src="entries/driftwood-beach/resources/trees-in-sky.JPG"
+                    alt="Driftwood Beach, Jekyll Island"
+                    class="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"
+                  ></div>
+                  <div class="relative px-8 pt-48 pb-4">
+                    <h5
+                      class="tracking-widest text-xs title-font font-medium text-white mb-1"
+                    >
+                      Jan 31, 2024
+                    </h5>
+                    <h3
+                      class="tracking-widest text-xs title-font font-medium text-white mb-1"
+                    >
+                      Driftwood Beach, Jekyll Island
+                    </h3>
+                    <p class="leading-relaxed mb-1 text-white">
+                      Cherishing family moments at the serene Driftwood Beach.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="p-4 md:w-1/2">
+              <a href="entries/historic-jekyll-island/index.html">
+                <div
+                  class="h-full rounded-lg overflow-hidden text-center relative"
+                >
+                  <img
+                    src="entries/historic-jekyll-island/resources/jekyll-island-hotel-steeple.JPG"
+                    alt="Jekyll Island"
+                    class="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"
+                  ></div>
+                  <div class="relative px-8 pt-48 pb-4">
+                    <h5
+                      class="tracking-widest text-xs title-font font-medium text-white mb-1"
+                    >
+                      Feb 1, 2024
+                    </h5>
+                    <h3
+                      class="tracking-widest text-xs title-font font-medium text-white mb-1"
+                    >
+                      Historic District, Jekyll Island
+                    </h3>
+                    <p class="leading-relaxed mb-1 text-white">
+                      A journey through the historic beauty of Jekyll Island.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="text-gray-600 body-font">
+      <p class="text-sm text-gray-500 my-4">&copy; 2024 VanDyke Travel Blog</p>
+    </footer>
+    <script>
+      document.addEventListener("click", function (event) {
+        var dropdown = document.getElementById("dropdownMenu");
+        var isClickInsideButton = document
+          .getElementById("dropdownButton")
+          .contains(event.target);
+
+        if (!isClickInsideButton) {
+          dropdown.classList.add("hidden");
+        } else {
+          dropdown.classList.toggle("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
